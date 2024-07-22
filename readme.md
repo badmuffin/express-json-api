@@ -11,6 +11,6 @@ It also serves static HTML page to interact with the API
 - **DELETE** `/api/posts/:id` - Delete a post by ID.
 
 ## Extra 
-- Clone the repo using git clone
-- Install dependencies: npm i or npm install
+- Clone the repo using `git clone https://github.com/badmuffin/express-json-api.git`
+- Install dependencies: `npm i` or `npm install`
 - `npm run dev` to start the server. Server will run on `http://localhost:8000`.
