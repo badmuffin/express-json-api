@@ -1,13 +1,16 @@
+import randomInteger from "random-int";
+
 // they are comig from database
 let posts = [
     { id: 1, title: "Post One" },
     { id: 2, title: "Post Two" },
     { id: 3, title: "Post Three" },
 ];
+// they are for testing purpose
 
 
-// @desc Get all posts
-// @route GET /api/posts
+// @desc Get all posts or limited post based on the query
+// @route GET /api/posts 
 export const getPosts = (req, res, next) => {
     const limit = parseInt(req.query.limit);
     if (!isNaN(limit) && limit > 0)
@@ -33,9 +36,9 @@ export const getPost = (req, res, next) => {
 // @route POST /api/posts
 export const createPost = (req, res, next) => {
     const newPost = {
-        id: posts.length + 1, 
+        // id will start from 4 as we already have three posts with id 1, 2, 3
+        id: randomInteger(4, 100), 
         title: req.body.title
-    
     };
 
     if (!newPost.title) {

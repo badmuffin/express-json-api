@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Posts</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1>Posts</h1>
+    <h1 class="title">Posts</h1>
 
-    <form id="add-post-form">
+    <form id="add-post-form" class="form">
       <label for="title">Title:</label><br />
-      <input type="text" id="title" name="title" /><br />
+      <input type="text" id="title" name="Title" placeholder="Write & Press Enter" /><br />
     </form>
 
-    <button id="get-posts-btn">Get Posts</button>
+    <button id="get-posts-btn" class="btn">Get Posts</button>
+    <button id="get-del-btn" class="btn">Delete Posts</button>
+    <button id="get-update-btn" class="btn">Update Posts</button>
     <div id="output"></div>
 
     <script src="./js/main.js"></script>
